@@ -1,5 +1,5 @@
-application: APP_NAME
-version: APP_VERSION
+application: arunjit-imagestore
+version: staging-20130407
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -14,20 +14,17 @@ handlers:
   upload: images/favicon.ico
 
 - url: /css
-  static_dir: css
+  static_dir: app/css
 
 - url: /images
   static_dir: images
 
 - url: /js
-  static_dir: js
+  static_dir: app/js
 
 - url: /-stats.*
   script: google.appengine.ext.appstats.ui.app
   login: admin
-
-- url: /_ah/spi/.*
-  script: services.app
 
 - url: .*
   script: main.app
@@ -44,5 +41,5 @@ skip_files:
 - ^(.*/)?.*_(unit)?test\.(py|js|html)
 - ^(.*/)?.*test(only|data).*
 - ^(.*/)?.*/RCS/.*
-- ^(.*/)?\..*
+- ^(.*/)?[\.+-].*
 - ^(.*/)?\.git
