@@ -1,7 +1,8 @@
 # Copyright 2013 Arunjit Singh. All Rights Reserved.
+
 """The main script."""
 
-__author__ = 'Arunjit Singh <arunjit@me.com>'
+__author__ = 'arunjitsingh'
 
 from ajpy.appengine import application
 from ajpy.appengine.wsgi import base
