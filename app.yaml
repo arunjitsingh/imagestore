@@ -10,14 +10,14 @@ libraries:
 
 handlers:
 - url: /favicon.ico
-  static_files: images/favicon.ico
-  upload: images/favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
 
 - url: /css
   static_dir: app/css
 
 - url: /images
-  static_dir: images
+  static_dir: app/images
 
 - url: /js
   static_dir: app/js
@@ -39,7 +39,9 @@ skip_files:
 - ^(.*/)?.*~
 - ^(.*/)?.*\.py[co]
 - ^(.*/)?.*_(unit)?test\.(py|js|html)
+- ^(.*/)?(js|py)tests?
 - ^(.*/)?.*test(only|data).*
 - ^(.*/)?.*/RCS/.*
 - ^(.*/)?[\.+-].*
 - ^(.*/)?\.git
+- ^app/(config.rb|(unittest|e2e).conf.js|coverage)
