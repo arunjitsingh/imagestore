@@ -9,14 +9,13 @@ from ajpy.appengine.wsgi import paths
 from ajpy.appengine.wsgi import response
 
 import config
-import templates
 
 
 @paths.Paths(r'/')
 class Index(base.RequestHandler):
 
   def Get(self):
-    return response.HtmlResponse(data=templates.Render('index.html', {}))
+    return response.TemplateResponse(self.GetTemplate('index.html'))
 
 
 app = application.CreateFromDecoratedPaths(debug=config.DEBUGGING)

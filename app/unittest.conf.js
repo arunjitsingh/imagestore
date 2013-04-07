@@ -26,5 +26,5 @@ runnerPort = 6002;
 
 colors = true;
 
-autoWatch = true;
+autoWatch = false;
 singleRun = false;
