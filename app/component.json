@@ -1,0 +1,14 @@
+{
+  "name": "imagestore",
+  "version": "0.0.0",
+  "main": "js/main.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "~1.0.6",
+    "angular-mocks": "~1.0.6"
+  }
+}
