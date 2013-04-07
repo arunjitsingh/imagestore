@@ -22,11 +22,11 @@ def CreateImageMetadata(img):
   return data
 
 
-@paths.Path(r'/images?')
+@paths.Paths(r'/images?')
 class ImageHandler(image.ImageHandler):
 
   def Post(self):
-    img = self.SaveImageAsync().get_result()
+    img = self.SaveImage().get_result()
     return response.JsonResponse(data=CreateImageMetadata(img))
 
   def Get(self):

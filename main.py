@@ -10,6 +10,7 @@ from ajpy.appengine.wsgi import paths
 from ajpy.appengine.wsgi import response
 
 import config
+from handlers import images
 
 
 @paths.Paths(r'/')
