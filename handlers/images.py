@@ -19,6 +19,7 @@ def CreateImageMetadata(img):
   """
   data = img.to_dict()
   data['id'] = img.key.id()
+  del data['blobkey']
   return data
 
 
@@ -26,7 +27,7 @@ def CreateImageMetadata(img):
 class ImageHandler(image.ImageHandler):
 
   def Post(self):
-    img = self.SaveImage().get_result()
+    img = self.SaveImageAsync().get_result().get()
     return response.JsonResponse(data=CreateImageMetadata(img))
 
   def Get(self):
