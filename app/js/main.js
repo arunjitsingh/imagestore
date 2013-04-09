@@ -11,3 +11,5 @@
  * @type {angular.Module}
  */
 var main = angular.module('main', []);
+
+main.directive('ajDropzone', Dropzone);

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       build: {
-        src: ['js/main.js'],
+        src: ['js/directives/dropzone.js', 'js/main.js'],
         dest: 'build/app-bundle.js'
       }
     },
